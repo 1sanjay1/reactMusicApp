@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Analysis Chart</title>
+    <base href="//localhost:9000" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<link href="./c/app.9d7ca0fda02c109724df.css" rel="stylesheet"></head>
+
+<body>
+
+
+    <div class="page-loader initial-loader">
+        <div class="lds-default">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+	<script>
+    //hack of IE and safari bug : Super expression must either be null or a function, not undefined
+    if (typeof HTMLElement !== 'function') {
+        var _HTMLElement = function() {};
+        _HTMLElement.prototype = HTMLElement.prototype;
+        HTMLElement = _HTMLElement;
+    }
+
+    // Download customElement pollyfill if browser not supported
+    if (!('registerElement' in document)) {
+        document.write(decodeURI("%3Cscript src='https://static.naukimg.com/s/0/0/j/customElements.min.js' type='text/javascript' %3E%3C/script%3E"));
+    }
+    </script>
+
+
+    <!-- <div class="fontIcon myfonticon-Back">sdf</div> -->
+
+    <div id="root" class="clr hidden"></div>
+
+    
+    <!-- <img alt="" width="100" height="100"> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <!-- <script src="resources/materialize/js/materialize.min.js"></script> -->
+
+    <script>
+        $( document ).ready(function() {
+            
+            $('#root').removeClass('hidden');
+            $('.initial-loader').addClass('hidden');
+
+            $(".dropdown-trigger").dropdown();
+            $('select').formSelect();
+            $('.modal').modal();
+            $('.collapsible').collapsible();
+        });
+
+    </script>
+<script type="text/javascript" src="./j/app.9d7ca0fda02c109724df.js"></script></body>
+
+</html>
